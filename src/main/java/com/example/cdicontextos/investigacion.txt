@@ -1,0 +1,25 @@
+@Dependent: Esta es la anotación predeterminada para el alcance de dependencia en CDI (Contexts and Dependency Injection) y significa que el objeto o componente inyectado vive y muere con el objeto que lo inyecta.
+Mejor dicho, no hay ningún ámbito en particular asociado con él.
+
+@RequestScoped: El alcance de solicitud se utiliza para objetos que deben vivir durante toda la duración de una solicitud HTTP.
+Se crea un objeto nuevo para cada solicitud entrante y se destruye cuando la solicitud se completa.
+
+@SessionScoped: El alcance de sesión se utiliza para objetos que deben vivir durante toda la duración de una sesión HTTP.
+Se crea un objeto nuevo para cada sesión de usuario y se destruye cuando la sesión finaliza.
+
+@ConversationScoped: Este alcance se utiliza para objetos que deben vivir durante toda la duración de una conversación entre el usuario y la aplicación.
+Una conversación puede abarcar varias solicitudes y respuestas HTTP, y el objeto se crea al comienzo de la conversación y se destruye al final.
+
+@ApplicationScoped: Este alcance se utiliza para objetos que deben vivir durante toda la duración de la aplicación.
+Se crea un objeto único para toda la aplicación y se destruye cuando la aplicación se detiene.
+
+
+@Qualifier: Se utiliza en conjunto con la inyección de dependencias basicamente permite la implementacion de una interfax especifica o de una clase abstracta.
+ Esto se logra mediante la asignación de un identificador único a la implementación deseada y la inclusión de este identificador en la anotación @Qualifier.
+
+@Alternative: Esta anotación se utiliza para marcar una implementación como una alternativa a la implementación predeterminada.
+Las implementaciones alternativas se utilizan cuando se desea reemplazar una implementación por defecto.
+
+@Named: Es una anotación que se utiliza para asignar un nombre a un objeto o componente.
+Es similar a la anotación @Qualifier, pero en lugar de utilizar un identificador único, se utiliza un nombre descriptivo.
+Esto puede ser útil en situaciones donde se requiere la inyección de dependencias en varias clases y se desea evitar la necesidad de crear varias anotaciones @Qualifier.
